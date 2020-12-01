@@ -1,9 +1,10 @@
 const Page = require("./util/page");
 
 let page;
-beforeEach(async () => {
+beforeEach(async (done) => {
   page = await Page.build();
   await page.goto("http://localhost:3000");
+  done();
 });
 
 afterEach(async (done) => {

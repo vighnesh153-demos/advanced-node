@@ -6,7 +6,8 @@
   "jest": {
     "setupFilesAfterEnv": [
       "./tests/setup.js"
-    ]
+    ],
+    "globalTeardown": "./tests/teardown.js"
   },
   "scripts": {
     "start": "node index.js",
