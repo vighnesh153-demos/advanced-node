@@ -7,6 +7,7 @@ class Page {
   static async build() {
     const browser = await puppeteer.launch({
       headless: true,
+      args: ["--no-sandbox"],
     });
 
     const page = new Page(await browser.newPage());
