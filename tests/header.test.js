@@ -6,8 +6,9 @@ beforeEach(async () => {
   await page.goto("http://localhost:3000");
 });
 
-afterEach(async () => {
+afterEach(async (done) => {
   await page.close();
+  done();
 });
 
 it("should assert that the header has correct text", async (done) => {
